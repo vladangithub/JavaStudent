@@ -4,28 +4,43 @@ public class StudentOrderValidator {
     }
 
     static void checkAll() {
-        checkCityRegister();
-        checkWedding();
-        checkChildren();
-        checkStudent();
-        checkChildren();
-        checkStudent();
+        StudentOrder so = readStudentOrder();
+
+        AnswerCityRegister cityAnswer = checkCityRegister(so);
+        checkWedding(so);
+        checkChildren(so);
+        checkStudent(so);
+
+        sendMail(so);
+
     }
 
-    static void checkCityRegister() {
+    static StudentOrder readStudentOrder() {
+        StudentOrder so = new StudentOrder();
+        return so;
+    }
+
+    static AnswerCityRegister checkCityRegister(StudentOrder so) {
+
         System.out.println("CityRegister is running");
+        AnswerCityRegister ans = new AnswerCityRegister();
+        return ans;
     }
 
-    static void checkWedding() {
+    static void checkWedding(StudentOrder so) {
         System.out.println("Wedding запущен");
     }
 
-    static void checkChildren() {
+    static void checkChildren(StudentOrder so) {
         System.out.println("Children Check is running");
     }
 
-    static void checkStudent() {
+    static void checkStudent(StudentOrder so) {
         System.out.println("Студенты проверяются");
+    }
+
+    static void sendMail(StudentOrder so) {
+
     }
 
 }
