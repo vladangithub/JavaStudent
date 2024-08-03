@@ -34,10 +34,7 @@ public class StudentOrderValidator {
     }
 
     static AnswerCityRegister checkCityRegister(StudentOrder so) {
-        System.out.println("CityRegister is running");
-        AnswerCityRegister ans = new AnswerCityRegister();
-        ans.success = false;
-        return ans;
+        return GityRegisterValidator.checkCityRegister(so);
     }
 
     static AnswerWedding checkWedding(StudentOrder so) {
