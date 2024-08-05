@@ -1,8 +1,14 @@
-public class StudentOrderValidator {
-    public static void main(String[] args) {
+package edu.vladan.javastudent;
 
-        checkAll();
-    }
+import edu.vladan.javastudent.domain.*;
+import edu.vladan.javastudent.mail.MailSender;
+import edu.vladan.javastudent.validator.ChildrenValidator;
+import edu.vladan.javastudent.validator.CityRegisterValidator;
+import edu.vladan.javastudent.validator.StudentValidator;
+import edu.vladan.javastudent.validator.WeddingValidator;
+
+public class StudentOrderValidator {
+    public static void main(String[] args) { checkAll(); }
 
     static void checkAll() {
         while (true) {
@@ -34,8 +40,8 @@ public class StudentOrderValidator {
     static AnswerCityRegister checkCityRegister(StudentOrder so) {
         CityRegisterValidator crv1 = new CityRegisterValidator();
         crv1.hostName = "Host1";
-        crv1.login = "Login1";
-        crv1.password = "Password1";
+//        crv1.login = "Login1";
+//        crv1.password = "Password1";
         AnswerCityRegister ans1 = crv1.checkCityRegister(so);
         return ans1;
     }
@@ -56,7 +62,5 @@ public class StudentOrderValidator {
 
     static void sendMail(StudentOrder so) {
         new MailSender().sendMail(so);
-
     }
-
 }
