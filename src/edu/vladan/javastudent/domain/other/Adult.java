@@ -1,4 +1,6 @@
-package edu.vladan.javastudent.domain;
+package edu.vladan.javastudent.domain.other;
+
+import edu.vladan.javastudent.domain.Person;
 
 import java.time.LocalDate;
 
@@ -10,6 +12,10 @@ public class Adult extends Person {
     private String issueDepartment;
     private String university;
     private String studentId;
+
+    public String getPersonString() {
+        return surName + " " + givenName + " " + " номер паспорта:" + " " + passportNumber;
+    }
 
     public String getPassportSeria() {
         return passportSeria;

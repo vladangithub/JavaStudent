@@ -1,41 +1,43 @@
 package edu.vladan.javastudent.domain;
 
+import edu.vladan.javastudent.domain.other.Adult;
+
 public class StudentOrder {
-    private String husFirstName;
-    private String husLastName;
-    private String wifeFirstName;
-    private String wifeLastName;
+    private long studentOrderId;
+    private Adult husband;
+    private Adult wife;
+    private Child child;
 
-    public String getHusFirstName() {
-        return husFirstName;
+    public long getStudentOrderId() {
+        return studentOrderId;
     }
 
-    public void setHusFirstName(String husFirstName) {
-        this.husFirstName = husFirstName;
+    public void setStudentOrderId(long studentOrderId) {
+        this.studentOrderId = studentOrderId;
     }
 
-    public String getHusLastName() {
-        return husLastName;
+    public Adult getHusband() {
+        return husband;
     }
 
-    public void setHusLastName(String husLastName) {
-        this.husLastName = husLastName;
+    public void setHusband(Adult husband) {
+        this.husband = husband;
     }
 
-    public String getWifeFirstName() {
-        return wifeFirstName;
+    public Adult getWife() {
+        return wife;
     }
 
-    public void setWifeFirstName(String wifeFirstName) {
-        this.wifeFirstName = wifeFirstName;
+    public void setWife(Adult wife) {
+        this.wife = wife;
     }
 
-    public String getWifeLastName() {
-        return wifeLastName;
+    public Child getChild() {
+        return child;
     }
 
-    public void setWifeLastName(String wifeLastName) {
-        this.wifeLastName = wifeLastName;
+    public void setChild(Child child) {
+        this.child = child;
     }
 }
 
